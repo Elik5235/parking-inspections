@@ -2,8 +2,8 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class ParkOfficer extends Model {
-    static associate(models) {
-
+    static associate({Protocol}) {
+ParkOfficer.hasMany(Protocol)
     }
   }
   ParkOfficer.init({
